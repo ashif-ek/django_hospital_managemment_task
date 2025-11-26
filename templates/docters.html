@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Doctors{% endblock %}
+
+{% block content %}
+<h1>Our Doctors</h1>
+
+<div class="doctor-list">
+    {% for d in doctors %}
+        <div class="doctor-card">
+            <img src="{{ d.doc_image.url }}" alt="{{ d.doc_name }}" class="doctor-image">
+            <h3>{{ d.doc_name }}</h3>
+            <p>Specialization: {{ d.doc_spec }}</p>
+            <p>Department: {{ d.dep_name.dep_name }}</p>
+        </div>
+    {% empty %}
+        <p>No doctors available.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

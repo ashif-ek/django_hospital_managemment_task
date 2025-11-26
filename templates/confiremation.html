@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Booking Confirmed{% endblock %}
+
+{% block content %}
+<h1>Your appointment has been booked successfully</h1>
+<p>We will contact you soon.</p>
+<a href="{% url 'index' %}">Go to Home</a>
+{% endblock %}
